@@ -61,6 +61,7 @@ const posts = [
 ];
 
 let container = document.getElementById('container');
+const likedPostIds = [];
 
 posts.forEach((post) => {
 
@@ -96,4 +97,15 @@ posts.forEach((post) => {
             </div>            
         </div>
   `
-});
+  const likeButton = document.querySelector('.like-button');
+  
+  
+  likeButton.addEventListener('click', function() {
+    likeButton.classList.toggle('red');
+    post.likes++;
+  })
+  console.log(post.likes);
+});  
+
+
+
